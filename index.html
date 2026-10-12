@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYKWQ4BV0L"></script>
 <script>
@@ -11,8 +12,7 @@
 
   gtag('config', 'G-ZYKWQ4BV0L');
 </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Babideeran — Roblox Scripter</title>
   <meta name="description"
     content="Roblox scripter & systems programmer portfolio. Cloth games , obbies , simulators , and gameplay logic that scales.">
@@ -835,19 +835,223 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+  /* ---------- WORKED WITH ---------- */
+.sub-title{font-family:var(--font-mono);font-size:13px;color:var(--purple);margin:0 0 16px}
+.sub-title::before{content:"▸ "}
+.games-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:56px}
+.game-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s,transform .2s}
+.game-card:hover{border-color:var(--blue);transform:translateY(-3px)}
+.game-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.game-name{font-family:var(--font-display);font-size:17px;font-weight:600}
+.game-role{font-family:var(--font-mono);font-size:11px;color:var(--green)}
+.game-desc{font-size:14px;color:var(--text-dim);flex:1}
+.game-meta{font-family:var(--font-mono);font-size:12px;color:var(--text-faint)}
+.game-card a.game-link{font-family:var(--font-mono);font-size:12.5px;color:var(--blue)}
+.people-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.person{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px}
+.avatar{width:46px;height:46px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-family:var(--font-display);font-weight:700;color:#0b0d17;background:linear-gradient(135deg,var(--purple),var(--blue))}
+.person-name{font-weight:600}
+.person-role{font-family:var(--font-mono);font-size:11.5px;color:var(--purple);margin-bottom:8px}
+.person-quote{font-size:14px;color:var(--text-dim);font-style:italic}
+
+/* ---------- VISIT COUNTER / EXTRAS ---------- */
+.visits{font-family:var(--font-mono);font-size:12.5px;color:var(--text-faint);display:flex;align-items:center;gap:8px}
+.visits b{color:var(--green);font-weight:600}
+.copy-btn{cursor:pointer;font:inherit;text-align:left;width:100%}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);background:var(--panel-alt);border:1px solid var(--green);color:var(--green);font-family:var(--font-mono);font-size:13px;padding:10px 18px;border-radius:8px;opacity:0;pointer-events:none;transition:.25s;z-index:99}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+nav.links a.active{color:var(--text)}
+nav.links a.active::before{opacity:1}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+@media(max-width:900px){.games-row{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.games-row,.people-grid{grid-template-columns:1fr}}
+
+/* ---------- CODE SHOWCASE ---------- */
+.code-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.code-tab{font-family:var(--font-mono);font-size:12.5px;background:var(--panel);color:var(--text-dim);border:1px solid var(--border);padding:8px 14px;border-radius:6px;cursor:pointer;transition:.2s}
+.code-tab:hover{border-color:var(--blue);color:var(--text)}
+.code-tab.on{background:var(--purple);border-color:var(--purple);color:#0b0d17}
+.code-box{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.code-box-bar{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:var(--panel-alt);border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:12.5px;color:var(--text-faint)}
+.code-copy{font:inherit;background:none;border:1px solid var(--border);color:var(--text-dim);padding:4px 10px;border-radius:5px;cursor:pointer}
+.code-copy:hover{border-color:var(--green);color:var(--green)}
+.code-box pre{margin:0;padding:20px;overflow-x:auto;font-family:var(--font-mono);font-size:13px;line-height:1.75;color:var(--text)}
+.code-note{padding:14px 20px;border-top:1px solid var(--border-soft);font-size:14px;color:var(--text-dim)}
+.tok-cm{color:var(--text-faint);font-style:italic}
+
+/* ---------- PRICING ---------- */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px}
+.price-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:26px;display:flex;flex-direction:column}
+.price-card.featured{border-color:var(--purple);box-shadow:0 16px 40px rgba(139,123,255,.14)}
+.price-name{font-family:var(--font-display);font-size:19px;font-weight:600}
+.price-amt{font-family:var(--font-display);font-size:32px;font-weight:700;margin:10px 0 4px}
+.price-amt small{font-family:var(--font-mono);font-size:12px;color:var(--text-faint);font-weight:400}
+.price-for{font-size:14px;color:var(--text-dim);margin-bottom:16px}
+.price-list{list-style:none;display:grid;gap:8px;margin-bottom:22px;flex:1;font-size:14px;color:var(--text-dim)}
+.price-list li::before{content:"✓ ";color:var(--green)}
+.price-terms{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:24px;font-size:14px;color:var(--text-dim)}
+.price-terms h4{font-family:var(--font-mono);font-size:12.5px;color:var(--purple);margin-bottom:8px}
+.price-terms a{color:var(--blue);border-bottom:1px solid transparent}
+.price-terms a:hover{border-color:var(--blue)}
+@media(max-width:900px){.price-grid,.price-terms{grid-template-columns:1fr}}
+
+  
+    /* ---------- MOBILE FIXES ---------- */
+    section.wrap{padding-top:72px;padding-bottom:72px}
+    section.hero{padding:56px 24px 96px}
+    .code-box pre{tab-size:4}
+    @media(max-width:1000px){.nav-cta{display:none}nav.links{gap:20px}}
+    @media(max-width:760px){
+      .nav-inner{padding:14px 20px}
+      section.wrap{padding-top:48px;padding-bottom:48px}
+      section.hero{padding-top:32px;padding-bottom:40px;gap:32px}
+      #contributed{padding-top:76px}
+      .vt-digits{--pad:74px}
+      .hero-actions .btn{flex:1;justify-content:center;min-width:140px}
+      .editor-body{font-size:12px;padding:16px 12px;min-height:0}
+      .section-head{margin-bottom:32px}
+      .contact-panel{padding:24px 20px}
+      .contact-method{flex-wrap:wrap;gap:6px}
+      .code-box pre{font-size:12px;padding:16px 14px}
+      .stat{padding:20px 12px}
+      .stat-num{font-size:26px}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:380px){.btn{padding:12px 14px;font-size:13px}.price-amt{font-size:28px}}
+  
+    /* ---------- VISITS TOTAL ---------- */
+    .visits-total{display:flex;align-items:center;gap:18px;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:12px;padding:20px 24px;margin-bottom:32px}
+    .visits-total[hidden]{display:none}
+    .visits-total .vt-num{font-family:var(--font-display);font-size:clamp(28px,5vw,40px);font-weight:700;color:var(--green);line-height:1}
+    .visits-total .vt-label{font-size:14px;color:var(--text-dim)}
+    .visits-total .vt-label small{display:block;font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);margin-top:2px}
+  
+    /* ---------- CONTRIBUTED VISITS (flip-digit panel) ---------- */
+    #contributed{padding-top:72px;position:relative;z-index:1}
+    .vt-panel.loading .vt-d{opacity:.3}
+    .vt-panel{position:relative;text-align:center;padding:clamp(28px,4vw,56px) 16px clamp(30px,4.4vw,60px);border:0;border-bottom:1px solid var(--border-soft);border-radius:0;background:transparent;overflow:hidden}
+    .vt-panel[hidden]{display:none}
+    .vt-title{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-display);font-size:clamp(22px,4vw,52px);font-weight:500;margin-bottom:clamp(20px,3.4vw,44px)}
+    .vt-title svg{width:1.15em;height:1.15em;color:var(--purple)}
+    .vt-digits{--n:11;--pad:48px;--tw:min(170px,calc((100vw - var(--pad))/(var(--n)*0.98)));display:flex;justify-content:center;align-items:center;gap:calc(var(--tw)*.1)}
+    .vt-d{width:var(--tw);height:calc(var(--tw)*1.4);display:grid;place-items:center;font-family:var(--font-mono);font-weight:700;font-size:calc(var(--tw)*.95);line-height:1;color:#a99cff;background:linear-gradient(180deg,#26224d 0%,#1a1838 49%,#141330 51%,#1d1b40 100%);border:1px solid rgba(139,123,255,.24);border-radius:calc(var(--tw)*.14);position:relative;text-shadow:0 0 14px rgba(139,123,255,.5)}
+    .vt-d::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.55)}
+    .vt-sep{width:calc(var(--tw)*.35);text-align:center;font-family:var(--font-mono);font-weight:700;font-size:calc(var(--tw)*.95);color:#a99cff}
+              @media(max-width:760px){#contributed{padding-top:55px}.vt-digits{--pad:26px}}
+  
+/* ---------- GAME + PERSON PICTURES ---------- */
+.game-thumb{margin:-20px -20px 6px;aspect-ratio:16/9;overflow:hidden;border-radius:12px 12px 0 0;display:grid;place-items:center;background:linear-gradient(135deg,#241a3d,#14203a);position:relative}
+.game-thumb span{font-family:var(--font-display);font-size:44px;font-weight:700;color:rgba(255,255,255,.18)}
+.game-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.avatar{width:56px;height:56px;overflow:hidden;font-size:20px}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  
+/* ---------- CAROUSELS (games, projects, people) ---------- */
+.gc{margin-bottom:56px}
+.car-row{--cw:min(440px,78vw);position:relative;display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:14px calc(50% - var(--cw)/2) 18px;margin-bottom:8px;scrollbar-width:none;outline:none;-webkit-overflow-scrolling:touch}
+#peopleGrid.car-row{--cw:min(520px,82vw)}
+.car-row::-webkit-scrollbar{display:none}
+.car-row:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:12px}
+.car-row .car-item{flex:0 0 var(--cw);scroll-snap-align:center;opacity:.42;transform:scale(.9);transition:opacity .35s,transform .35s,border-color .2s;cursor:pointer}
+.car-row .car-item.active{opacity:1;transform:scale(1);cursor:default;border-color:var(--purple);box-shadow:0 16px 40px rgba(139,123,255,.16)}
+.car-row .car-item.active:hover{transform:translateY(-3px)}
+.car-row .car-item:not(.active):hover{transform:scale(.9);opacity:.65}
+.gc-controls{display:flex;justify-content:center;align-items:center;gap:14px}
+.gc-btn{width:42px;height:42px;flex-shrink:0;border-radius:50%;border:1px solid var(--border);background:var(--panel);color:var(--text);font-size:22px;line-height:1;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.gc-btn:hover{border-color:var(--purple);color:var(--purple)}
+.gc-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.gc-pill{font-family:var(--font-mono);font-size:12px;background:var(--panel);color:var(--text-dim);border:1px solid var(--border);padding:7px 12px;border-radius:999px;cursor:pointer;transition:.2s}
+.gc-pill:hover{border-color:var(--blue);color:var(--text)}
+.gc-pill.on{background:var(--purple);border-color:var(--purple);color:#0b0d17}
+@media(max-width:760px){.gc-pills{order:3;flex-basis:100%}.gc-controls{flex-wrap:wrap}.gc-btn{order:1}.gc-btn:last-child{order:2}}
+@media(prefers-reduced-motion:reduce){.car-row{scroll-behavior:auto}}
+
+  
+  
+/* ---------- ANIMATED BACKGROUND ---------- */
+.bg-orbs{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.bg-orbs span{position:absolute;width:min(72vw,680px);aspect-ratio:1;border-radius:50%;will-change:transform}
+.bg-orbs span:nth-child(1){left:-14%;top:6%;background:radial-gradient(circle,rgba(139,123,255,.24),transparent 65%);animation:orbA 26s ease-in-out infinite alternate}
+.bg-orbs span:nth-child(2){right:-16%;top:36%;background:radial-gradient(circle,rgba(94,200,248,.17),transparent 65%);animation:orbB 32s ease-in-out infinite alternate}
+.bg-orbs span:nth-child(3){left:26%;bottom:-26%;background:radial-gradient(circle,rgba(255,139,214,.13),transparent 65%);animation:orbC 38s ease-in-out infinite alternate}
+@keyframes orbA{to{transform:translate3d(22vw,14vh,0) scale(1.18)}}
+@keyframes orbB{to{transform:translate3d(-20vw,-16vh,0) scale(1.1)}}
+@keyframes orbC{to{transform:translate3d(-14vw,-12vh,0) scale(1.25)}}
+#bgCanvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 25%,#000,transparent 80%);mask-image:radial-gradient(ellipse 80% 70% at 50% 25%,#000,transparent 80%)}
+@media(prefers-reduced-motion:reduce){.bg-orbs span{animation:none}}
+  
+/* ---------- UPGRADED EDITOR ---------- */
+.editor{position:relative;animation:edFloat 8s ease-in-out infinite alternate}
+@keyframes edFloat{to{transform:translateY(-8px)}}
+.editor::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(139,123,255,.16),transparent 62%)}
+.editor:hover::before{opacity:1}
+.editor>*{position:relative;z-index:1}
+.editor-bar{padding:0 12px 0 14px}
+.editor-tabs{display:flex;flex:1;min-width:0;margin-left:8px;overflow-x:auto;scrollbar-width:none}
+.editor-tabs::-webkit-scrollbar{display:none}
+.editor-tab{font-family:var(--font-mono);font-size:12.5px;color:var(--text-faint);background:none;border:0;border-right:1px solid var(--border-soft);border-bottom:2px solid transparent;padding:14px 12px 12px;cursor:pointer;display:flex;align-items:center;white-space:nowrap;transition:color .2s,background .2s}
+.editor-tab:hover{color:var(--text)}
+.editor-tab.on{color:var(--text);background:var(--panel);border-bottom-color:var(--purple)}
+.editor-body{min-height:392px}
+.editor-body .code-line{margin:0 -20px;padding:0 20px;border-left:2px solid transparent;transition:background .15s}
+.editor-body .code-line.cur{background:linear-gradient(90deg,rgba(139,123,255,.13),transparent 85%);border-left-color:var(--purple)}
+.editor-body .code-line.cur .line-no{color:var(--text-dim)}
+.editor-status{display:flex;align-items:center;gap:16px;padding:7px 16px;border-top:1px solid var(--border);background:var(--panel-alt);font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint)}
+.editor-status #edPos{margin-left:auto}
+.ed-live{display:flex;align-items:center;gap:6px;color:var(--green)}
+.ed-live i{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@media(max-width:760px){.editor-body{min-height:350px}.editor-dot,.editor-tab .ext{display:none}.editor-tab{padding:13px 9px 11px;font-size:11px}.editor-status{gap:10px;padding:6px 12px}}
+/* ---------- EDITOR POLISH ---------- */
+.editor{border:0;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 70px rgba(139,123,255,.14)}
+.editor::after{content:"";position:absolute;inset:0;z-index:3;border-radius:inherit;padding:1px;pointer-events:none;background:linear-gradient(135deg,rgba(139,123,255,.75),rgba(94,200,248,.25) 38%,rgba(255,139,214,.3) 68%,rgba(139,123,255,.55));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude}
+.editor-bar{background:linear-gradient(180deg,#232848,#1a1e38)}
+.editor-crumbs{padding:8px 16px;font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);background:rgba(10,12,24,.35);border-bottom:1px solid var(--border-soft)}
+.editor-crumbs i{font-style:normal;margin:0 5px;opacity:.6}
+.editor-crumbs b{font-weight:500;color:var(--text-dim)}
+.editor-body .line-no{width:34px;margin-right:14px;padding-right:12px;text-align:right;color:#4b5075;border-right:1px solid var(--border-soft)}
+.editor-body .code-line.cur .line-no{color:var(--purple);border-right-color:rgba(139,123,255,.45)}
+.editor .caret{background:var(--blue);box-shadow:0 0 10px var(--blue)}
+.editor-status{background:linear-gradient(180deg,#1a1e38,#161a31)}
+@media(max-width:760px){.editor-body .line-no{width:26px;margin-right:10px;padding-right:9px}}
+  
+/* ---------- GAME GROUP LINE ---------- */
+.game-by{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;color:var(--text-dim)}
+.game-by[hidden]{display:none}
+.by-ico{width:22px;height:22px;border-radius:6px;object-fit:cover;flex-shrink:0;border:1px solid var(--border)}
+  
+/* ---------- STUDIO / PERSON CARDS ---------- */
+a.avatar{text-decoration:none;color:#0b0d17;transition:transform .2s,box-shadow .2s}
+a.avatar:hover{transform:scale(1.07);box-shadow:0 0 0 3px rgba(139,123,255,.45)}
+.avatar.sq{border-radius:14px;background:rgba(255,255,255,.07)}
+.person-members{font-family:var(--font-mono);font-size:12.5px;color:var(--green);margin:-2px 0 8px}
+.person-members[hidden]{display:none}
+.person-name a:hover{color:var(--blue)}
   </style>
+<meta property="og:title" content="Babideeran — Roblox Scripter">
+<meta property="og:description" content="Catalog systems, obbies, simulators and gameplay logic. Commissions open.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://YOUR-SITE/preview.png">
+<meta name="theme-color" content="#0b0d17">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 
 <body>
+
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
 
   <header class="nav">
     <div class="nav-inner">
       <a class="logo" href="#top"> Babideeran<span class="dot">.lua</span></a>
       <nav class="links">
-        <a href="#top">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+<a href="#top">Home</a>
+<a href="#skills">Skills</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#worked-with">Worked With</a>
+<a href="#code">Code</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
       </nav>
       <a class="nav-cta" href="#contact">Commission_Me()</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
@@ -856,6 +1060,14 @@
 
   <main id="top">
 
+    <div id="contributed">
+      <div class="vt-panel loading" id="visitsTotal">
+        <div class="vt-title"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="11" width="4.5" height="10" rx="1"/><rect x="9.75" y="3" width="4.5" height="18" rx="1"/><rect x="16.5" y="8" width="4.5" height="13" rx="1"/></svg>Contributed Visits</div>
+        <div class="vt-digits" id="vtDigits" role="img"><span class="vt-d">0</span><span class="vt-d">0</span><span class="vt-d">0</span><span class="vt-sep">.</span><span class="vt-d">0</span><span class="vt-d">0</span><span class="vt-d">0</span><span class="vt-sep">.</span><span class="vt-d">0</span><span class="vt-d">0</span><span class="vt-d">0</span></div>
+      </div>
+    </div>
+
+
     <!-- ================= HERO ================= -->
     <section class="hero wrap">
       <div>
@@ -863,25 +1075,27 @@
         <h1 class="headline"><span class="accent"> Hello </span> <span class="accent2"> There</span>.</h1>
         <p class="subhead">I'm <strong> Babideeran (20 y/o) </strong>, a college student who has passion for roblox
           games , I like to make anything new and complex things and fix bugs </p>
-        <a href="#portfolio" class="btn btn-primary">View Portfolio →</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
-      </div>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">View Portfolio →</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
       </div>
 
-      <div class="editor">
+      <div class="editor" id="editor">
         <div class="editor-bar">
-          <span class="editor-dot red"></span><span class="editor-dot yellow"></span><span
-            class="editor-dot green"></span>
-          <span class="editor-filename">Developer.lua</span>
+          <span class="editor-dot red"></span><span class="editor-dot yellow"></span><span class="editor-dot green"></span>
+          <div class="editor-tabs" id="edTabs" role="tablist" aria-label="Files"></div>
         </div>
+        <div class="editor-crumbs" id="edCrumbs"></div>
         <div class="editor-body" id="typedCode"></div>
+        <div class="editor-status"><span>Luau</span><span>UTF-8</span><span id="edPos">Ln 1, Col 1</span><span class="ed-live"><i></i>Available</span></div>
       </div>
     </section>
 
     <!-- ================= SKILLS ================= -->
     <section id="skills" class="wrap reveal">
       <div class="section-head">
-        <span class="section-kicker">// SKill set</span>
+        <span class="section-kicker">// Skill set</span>
 
 
       </div>
@@ -955,11 +1169,27 @@
         <p class="section-desc">"My works - but not limited to what I can do." </p>
       </div>
 
-      <div class="project-grid">
+      <div class="gc" id="projCarousel" role="region" aria-roledescription="carousel" aria-label="Recent works">
+<div class="project-grid" id="projRow" tabindex="0">
+<div class="project-card">
+          <div class="project-thumb" style="padding:0; position:relative; overflow:hidden; height:168px;">
+            <img src="https://img.youtube.com/vi/vNRtN4dLFWM/maxresdefault.jpg" alt="Bow system" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')"
+              style="display:block; width:100%; height:100%; object-fit:cover;">
+            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.1) 50%, transparent);"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tag" style="color:#5eea8f;">Showcase</div>
+            <div class="project-title" style="margin:4px 0 0; color:#fff;">Bow system</div>
+            <p class="project-desc">Watch the demo to see this project in action.</p>
+            <div class="project-chips"><span class="project-chip">Roblox</span><span class="project-chip">Scripting</span></div>
+            <div class="project-links"><a href="https://youtu.be/vNRtN4dLFWM" target="_blank" rel="noopener">Watch demo →</a></div>
+          </div>
+        </div>
+
 
         <div class="project-card">
           <div class="project-thumb" style="padding:0; position:relative; overflow:hidden; height:168px;">
-            <img src="https://img.youtube.com/vi/uyGbVSVO0SU/maxresdefault.jpg" alt="Cloth Stand"
+            <img src="https://img.youtube.com/vi/h6u3lM766rA/maxresdefault.jpg" alt="Cloth Stand" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')"
               style="display:block; width:100%; height:100%; object-fit:cover;">
 
             <div
@@ -977,7 +1207,7 @@
             <div class="project-chips"><span class="project-chip">Catalog</span><span class="project-chip">Data
                 store</span><span class="project-chip">Server - Server communication </span><span
                 class="project-chip">CloudFlare &amp; Proxy </span></div>
-            <div class="project-links"><a href="https://youtu.be/uyGbVSVO0SU" target="_blank">Watch demo →</a></div>
+            <div class="project-links"><a href="https://www.youtube.com/watch?v=h6u3lM766rA" target="_blank">Watch demo →</a></div>
           </div>
         </div>
 
@@ -1020,7 +1250,7 @@
           <div class="project-body">
             <div class="project-tag" style="color:#5eea8f;">Digging system</div>
             <div class="project-title" style="margin:4px 0 0; color:#fff;">Dig</div>
-            <p class="project-desc"> An dig system with prefect , normal , miss hits and the dig progress sytem , A system to showcase my ability to script uis.  </p>
+            <p class="project-desc"> A dig system with perfect , normal , miss hits and the dig progress system , A system to showcase my ability to script uis.  </p>
             <div class="project-chips"><span class="project-chip">Digging system</span><span class="project-chip">UI</span></div>
             <div class="project-links"><a href="https://www.youtube.com/watch?v=GaHTdzxKkBo" target="_blank">Watch demo →</a></div>
           </div>
@@ -1044,7 +1274,7 @@
           <div class="project-body">
             <div class="project-tag" style="color:#5eea8f;">Plot System</div>
             <div class="project-title" style="margin:4px 0 0; color:#fff;">Build your team (Football)</div>
-            <p class="project-desc"> A system done for a game under play verse , showcases my abiltiy to work with already existing system and adapt to it swiftly .  </p>
+            <p class="project-desc"> A system done for a game under play verse , showcases my ability to work with already existing system and adapt to it swiftly .  </p>
             <div class="project-chips"><span class="project-chip">Plot system</span><span class="project-chip">Existing system</span><span class="project-chip">Bug fixing</span></div>
             <div class="project-links"><a href="https://www.youtube.com/watch?v=sC5Y4x5JyJg" target="_blank">Watch demo →</a></div>
           </div>
@@ -1100,8 +1330,94 @@
 
     
       </div>
+    <div class="gc-controls">
+      <button class="gc-btn gc-prev" aria-label="Previous">‹</button>
+      <div class="gc-pills"></div>
+      <button class="gc-btn gc-next" aria-label="Next">›</button>
+    </div>
+  </div>
     </section>
 
+
+    <section id="worked-with" class="wrap reveal">
+  <div class="section-head">
+    <span class="section-kicker">// worked with</span>
+    <h2 class="section-title">Games &amp; People</h2>
+    <p class="section-desc">Games I've scripted for and the people who trusted me with their projects.</p>
+  </div>
+
+  <h3 class="sub-title">Games I worked on</h3>
+  <div class="gc" id="gamesCarousel" role="region" aria-roledescription="carousel" aria-label="Games I worked on">
+    <div class="games-row" id="gamesRow" tabindex="0"></div>
+    <div class="gc-controls">
+      <button class="gc-btn gc-prev" id="gcPrev" aria-label="Previous game">‹</button>
+      <div class="gc-pills" id="gcPills"></div>
+      <button class="gc-btn gc-next" id="gcNext" aria-label="Next game">›</button>
+    </div>
+  </div>
+
+  <h3 class="sub-title">People &amp; studios I worked with</h3>
+  <div class="gc" id="peopleCarousel" role="region" aria-roledescription="carousel" aria-label="People and studios I worked with">
+    <div class="people-grid" id="peopleGrid" tabindex="0"></div>
+    <div class="gc-controls">
+      <button class="gc-btn gc-prev" aria-label="Previous">‹</button>
+      <div class="gc-pills"></div>
+      <button class="gc-btn gc-next" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<section id="code" class="wrap reveal">
+  <div class="section-head">
+    <span class="section-kicker">// code</span>
+    <h2 class="section-title">How I write code</h2>
+    <p class="section-desc">Real snippets, not pseudocode. Typed, modular and safe against exploiters.</p>
+  </div>
+  <div class="code-tabs" id="codeTabs"></div>
+  <div class="code-box">
+    <div class="code-box-bar"><span id="codeFile">file.lua</span><button class="code-copy" id="codeCopy">Copy</button></div>
+    <pre><code id="codeBody"></code></pre>
+    <div class="code-note" id="codeNote"></div>
+  </div>
+</section>
+
+<section id="pricing" class="wrap reveal">
+  <div class="section-head">
+    <span class="section-kicker">// pricing</span>
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-desc">Starting prices. Final quote depends on scope, so send me your references.</p>
+  </div>
+
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-name">Bug fixes &amp; small tasks</div>
+      <div class="price-amt">$10 <small>starting</small></div>
+      <p class="price-for">Fixing broken scripts, small features, UI tweaks.</p>
+      <ul class="price-list"><li>Fix within 24-48h</li><li>1 round of revisions</li><li>Explained changes</li></ul>
+      <a class="btn btn-ghost" href="#contact">Get a quote</a>
+    </div>
+    <div class="price-card featured">
+      <div class="price-name">Single system</div>
+      <div class="price-amt">$40 <small>starting</small></div>
+      <p class="price-for">Catalog stands, obbies, shops, inventory, auctions, digging.</p>
+      <ul class="price-list"><li>Clean, commented, modular code</li><li>Data saving included</li><li>Easy for non-scripters to configure</li><li>2 rounds of revisions</li></ul>
+      <a class="btn btn-primary" href="#contact">Get a quote</a>
+    </div>
+    <div class="price-card">
+      <div class="price-name">Full game scripting</div>
+      <div class="price-amt">Custom <small>quote</small></div>
+      <p class="price-for">Several systems or a full game, delivered in milestones.</p>
+      <ul class="price-list"><li>Milestone-based payments</li><li>Regular progress updates</li><li>Anti-exploit pass</li><li>Revenue share possible (see terms)</li></ul>
+      <a class="btn btn-ghost" href="#contact">Discuss project</a>
+    </div>
+  </div>
+
+  <div class="price-terms">
+    <div><h4>Payment</h4>PayPal, Bitcoin or Robux. Larger jobs are paid in milestones, with part upfront.</div>
+    <div><h4>Percentage</h4>I only take a percentage when the game is already released.</div>
+    <div><h4>Before you order</h4>Please read the <a href="terms.html">full Terms &amp; Conditions</a>.</div>
+  </div>
+</section>
 
     <br>
     <br>
@@ -1114,7 +1430,7 @@
 
       <div class="contact-panel">
         <div>
-          <div class="prompt-line"><span class="path">Please take a look</div>
+          <div class="prompt-line"><span class="path">Please take a look</span></div>
           <h3>Need something done?</h3>
           <p>Let me know what you need and show me as much references as you can , and the budget for the system.</p>
             <p>I take paypal , bitcoin, robux </p>
@@ -1124,7 +1440,7 @@
         </div>
 
         <div class="contact-methods">
-          <a class="contact-method" href="#"><span class="label">Discord</span><span class="value">babideeran</span></a>
+          <a class="contact-method copy-btn" href="#" data-copy="babideeran" style="background:var(--panel-alt)"><span class="label">Discord (click to copy)</span><span class="value">babideeran</span></a>
           <a class="contact-method" href="https://www.roblox.com/users/1291255861/profile"><span class="label">Roblox</span><span
               class="value">The_Babideeran</span></a>
    
@@ -1138,6 +1454,7 @@
     <div class="wrap footer-inner">
       <p>© <span id="year"></span> Babideeran</p>
       <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
         <a href="#top">Back to top ↑</a>
       </div>
     </div>
@@ -1154,7 +1471,7 @@
       const isOpen = navLinks.style.display === 'flex';
       navLinks.style.display = isOpen ? 'none' : 'flex';
       navLinks.style.position = 'fixed';
-      navLinks.style.top = '64px';
+      navLinks.style.top = '52px';
       navLinks.style.left = '0';
       navLinks.style.right = '0';
       navLinks.style.flexDirection = 'column';
@@ -1171,61 +1488,1024 @@
     }, { threshold: 0.12 });
     reveals.forEach(el => io.observe(el));
 
-    // ---- typed code animation ----
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const codeLines = [
-      { html: '<span class="tok-kw">local</span> <span class="tok-fn">Developer</span> = {}' },
-      { html: '' },
-      { html: '<span class="tok-prop">Developer</span>.Role = <span class="tok-str">"Scripter"</span>' },
-      { html: '<span class="tok-prop">Developer</span>.Focus = <span class="tok-str">"{Catalog,Backend}"</span>' },
-      { html: '<span class="tok-prop">Developer</span>.Experience = <span class="tok-num">6+</span> ' },
-      { html: '' },
-      { html: '<span class="tok-prop">Developer</span>.Specialties = {' },
-      { html: '&nbsp;&nbsp;<span class="tok-str">"Bug fixing"</span>,' },
-      { html: '&nbsp;&nbsp;<span class="tok-str">"Obby"</span>,' },
-      { html: '&nbsp;&nbsp;<span class="tok-str">"Simulator"</span>,' },
-      { html: '}' },
-      { html: '' },
-      { html: '<span class="tok-prop">Developer</span>.Status = <span class="tok-str">"Open for commissions"</span>' },
-      { html: '' },
-      { html: '<span class="tok-kw">return</span> <span class="tok-fn">Developer</span>' },
-    ];
+    // ---- code editor (tabs, typing, run) ----
+(() => {
+  const body = document.getElementById('typedCode'), tabsEl = document.getElementById('edTabs'), pos = document.getElementById('edPos');
+  const crumbs = document.getElementById('edCrumbs'), ed = document.getElementById('editor');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const t = (c, x) => `<span class="tok-${c}">${x}</span>`;
+  const kw = x => t('kw', x), fn = x => t('fn', x), str = x => t('str', x), num = x => t('num', x), prop = x => t('prop', x), cm = x => t('cm', x);
 
-    const editorEl = document.getElementById('typedCode');
-
-    function renderStatic() {
-      editorEl.innerHTML = codeLines.map((line, i) =>
-        `<div class="code-line"><span class="line-no">${i + 1}</span><span class="code-content">${line.html || '&nbsp;'}</span></div>`
-      ).join('');
+  const FILES = {
+    'Developer.lua': {
+      lines: [
+        `${kw('local')} ${fn('Developer')} = {}`, '',
+        `${prop('Developer')}.Role = ${str('"Scripter"')}`,
+        `${prop('Developer')}.Focus = {${str('"Catalog"')}, ${str('"Backend"')}}`,
+        `${prop('Developer')}.Experience = ${num('6')} ${cm('-- years')}`, '',
+        `${prop('Developer')}.Specialties = {`,
+        `  ${str('"Bug fixing"')},`, `  ${str('"Obby"')},`, `  ${str('"Simulator"')},`, `}`, '',
+        `${prop('Developer')}.Status = ${str('"Open for commissions"')}`, '',
+        `${kw('return')} ${fn('Developer')}`]
+    },
+    'Systems.lua': {
+      lines: [
+        `${kw('local')} ${fn('Systems')} = {`,
+        `  ${str('"Catalog &amp; Cloth stands"')},`, `  ${str('"DataStores"')},`, `  ${str('"Inventory"')},`, `  ${str('"Matchmaking"')},`, `  ${str('"Anti-Exploit"')},`, `}`, '',
+        `${kw('for')} _, name ${kw('in')} ${fn('Systems')} ${kw('do')}`,
+        `  ${fn('print')}(${str('"Shipping "')} .. name)`,
+        `${kw('end')}`, '',
+        `${kw('return')} ${fn('Systems')}`]
+    },
+    'Contact.lua': {
+      lines: [
+        `${kw('local')} ${fn('Contact')} = {}`, '',
+        `${prop('Contact')}.Discord = ${str('"babideeran"')}`,
+        `${prop('Contact')}.Roblox = ${str('"The_Babideeran"')}`,
+        `${prop('Contact')}.Reply = ${str('"within 24h"')}`, '',
+        `${kw('function')} ${prop('Contact')}.${fn('hire')}(idea)`,
+        `  ${kw('return')} ${str('"Let\'s build "')} .. idea`,
+        `${kw('end')}`, '',
+        `${fn('print')}(${prop('Contact')}.${fn('hire')}(${str('"your idea"')}))`, '',
+        `${kw('return')} ${fn('Contact')}`]
     }
+  };
+  const names = Object.keys(FILES);
+  const caret = document.createElement('span'); caret.className = 'caret';
+  let current = names[0], token = 0;
 
-    function typeCode() {
-      editorEl.innerHTML = '';
-      let lineIndex = 0;
+  names.forEach(n => {
+    const b = document.createElement('button');
+    b.className = 'editor-tab'; b.type = 'button'; b.innerHTML = n.replace('.lua', '<span class="ext">.lua</span>'); b.setAttribute('role', 'tab');
+    b.addEventListener('click', () => { if (n !== current) openFile(n, true); });
+    tabsEl.appendChild(b);
+  });
+  const tabEls = [...tabsEl.children];
 
-      function nextLine() {
-        if (lineIndex >= codeLines.length) {
-          // add caret at end, hold, then restart
-          const last = editorEl.querySelector('.code-line:last-child .code-content');
-          if (last) last.insertAdjacentHTML('beforeend', '<span class="caret"></span>');
-
-          return;
-        }
-        const row = document.createElement('div');
-        row.className = 'code-line';
-        row.innerHTML = `<span class="line-no">${lineIndex + 1}</span><span class="code-content">${codeLines[lineIndex].html || '&nbsp;'}</span>`;
-        editorEl.appendChild(row);
-        lineIndex++;
-        setTimeout(nextLine, 90 + Math.random() * 70);
+  function row(i) {
+    const el = document.createElement('div'); el.className = 'code-line';
+    el.innerHTML = `<span class="line-no">${i}</span><span class="code-content"></span>`;
+    return el;
+  }
+  async function typeInto(el, html, my, fast, lineNo) {
+    const content = el.querySelector('.code-content');
+    const tmp = document.createElement('span'); tmp.innerHTML = html;
+    content.appendChild(tmp); content.appendChild(caret);
+    const walker = document.createTreeWalker(tmp, NodeFilter.SHOW_TEXT), nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    const full = nodes.map(n => n.nodeValue); nodes.forEach(n => n.nodeValue = '');
+    let col = 1;
+    for (let k = 0; k < nodes.length; k++) {
+      for (const ch of full[k]) {
+        if (my !== token) return false;
+        nodes[k].nodeValue += ch; col++;
+        pos.textContent = `Ln ${lineNo}, Col ${col}`;
+        await sleep(fast ? 4 : 8 + Math.random() * 12);
       }
-      nextLine();
     }
+    return true;
+  }
+  async function openFile(name, fast) {
+    const my = ++token, f = FILES[name];
+    current = name;
+    crumbs.innerHTML = `portfolio <i>›</i> scripts <i>›</i> <b>${name}</b>`;
+    tabEls.forEach((b, i) => { const on = names[i] === name; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+    const onTab = tabEls[names.indexOf(name)];
+    tabsEl.scrollTo({ left: Math.max(0, onTab.offsetLeft - tabsEl.offsetLeft - 8), behavior: reduced ? 'auto' : 'smooth' });
+    body.innerHTML = '';
+    if (reduced) {
+      f.lines.forEach((h, i) => { const r = row(i + 1); r.querySelector('.code-content').innerHTML = h; body.appendChild(r); });
+      pos.textContent = `Ln ${f.lines.length}, Col ${f.lines[f.lines.length - 1].replace(/<[^>]+>/g, '').length + 1}`;
+      return;
+    }
+    for (let i = 0; i < f.lines.length; i++) {
+      if (my !== token) return;
+      const r = row(i + 1); body.appendChild(r);
+      body.querySelectorAll('.cur').forEach(x => x.classList.remove('cur')); r.classList.add('cur');
+      if (!(await typeInto(r, f.lines[i], my, fast, i + 1))) return;
+      await sleep(fast ? 14 : 70);
+    }
+  }
+  ed.addEventListener('pointermove', e => {
+    const r = ed.getBoundingClientRect();
+    ed.style.setProperty('--mx', (e.clientX - r.left) + 'px'); ed.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }, { passive: true });
+  openFile(current, false);
+})();
+  
+// ---- games & people data (edit these) ----
+const games = [
+  { name: "Remnants of Dragons", role: "Scripter", desc: "I added the bow system and fixed the bugs and various things", meta: "72K+ visits", link: "https://www.roblox.com/games/103282183767131/Remnants-of-Dragons" },
+  { name: "Build an Ultimate Team", role: "Scripter", desc: "I added the plot system and fixed bugs ", meta: "Play verse", link: "https://www.roblox.com/games/136823864219378/Build-an-Ultimate-Team" },
+  { name: "Beg to escape poverty", role: "Lead Scripter", desc: "Fixed exploits and legacy code in an existing game.", meta: "850k+", link: "https://www.roblox.com/games/15894384621/Beg-to-escape-poverty" },
+  { name: "Infected", role: "Scripter", desc: "I added the npc system,flashlight,Character customization,etc", meta: "67k+", link: "https://www.roblox.com/games/117093191668944/INFECTED" },
+  
+];
+// ===== WHAT TO SHOW (true = show, false = hide) =====
+const SHOW = {
+  gameGroup: true,      // "by <group or creator name>" under each game's title
+  gameGroupIcon: true,  // the group's icon next to that name
+  peopleIcon: true      // the picture on each person / studio card (click it to open their link)
+};
+// The group name and icon are found automatically from the game's owner on Roblox. You can also set them yourself, per game:
+//   group: "My Studio"                 use this name instead of the automatic one
+//   groupIcon: "images/studio.png"     use this icon instead of the automatic one (or a full https link)
+//   groupId: 1234567                   take the name and icon from this Roblox group
+//   showGroup: false                   hide the group line on this one game only
+// Per person:  icon: false             hide the picture on this one person only
+// Pictures (all optional):
+//   games:  image: "images/my-game.png"   (or a full https link). Leave it out and the Roblox thumbnail is used automatically.
+//   people: image: "images/john.png"      (or a full https link)
+//           or put their Roblox profile in link (https://www.roblox.com/users/123456/profile) or userId: 123456
+//           and their Roblox avatar headshot is used automatically.
+const people = [
+  // YouTubers
+  { name: "Cheesymembey", role: "YouTuber · @Cheesymembey", link: "https://www.youtube.com/@Cheesymembey", image: "https://unavatar.io/youtube/@Cheesymembey" },
+  { name: "AllStar", role: "YouTuber · @AllStar", link: "https://www.youtube.com/channel/UC15FhQd0x8dYPkFsH0bTsMg", image: "https://unavatar.io/youtube/@AllStar" },
+  // Studios / Roblox communities (name, icon and member count are loaded live from Roblox)
+  { name: "Dreamwave Inn", role: "Roblox community", groupId: 4404255, link: "https://www.roblox.com/communities/4404255/Dreamwave-Inn#!/about" },
+  { name: "3K Forever", role: "Roblox community", groupId: 5409923, link: "https://www.roblox.com/communities/5409923/3K-Forever#!/about" },
+  { name: "big floppa studioz", role: "Roblox community", groupId: 33667535, link: "https://www.roblox.com/communities/33667535/big-floppa-studioz#!/about" },
+  { name: "Sophias Close", role: "Roblox community", groupId: 35640652, link: "https://www.roblox.com/communities/35640652/sophias-close#!/about" },
+  { name: "Kuromify", role: "Roblox community", groupId: 13413763, link: "https://www.roblox.com/communities/13413763/kuromify#!/about" },
+  // Website (icon only)
+  { name: "Tricore Studios", role: "Studio · tricorestudio.com", link: "https://www.tricorestudio.com/", image: "https://www.google.com/s2/favicons?domain=tricorestudio.com&sz=128", square: true },
+];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-    if (prefersReduced) {
-      renderStatic();
-    } else {
-      typeCode();
+document.getElementById('gamesRow').innerHTML = games.map(g => `
+  <div class="game-card">
+    <div class="game-thumb">${g.image ? `<img src="${esc(g.image)}" alt="${esc(g.name)}" loading="lazy" onerror="this.remove()">` : `<span>${esc((g.name || '?').trim()[0] || '?')}</span>`}</div>
+    <div class="game-top"><span class="game-name">${esc(g.name)}</span><span class="game-role">${esc(g.role)}</span></div>
+    ${SHOW.gameGroup && g.showGroup !== false ? `<div class="game-by"${g.group || g.groupIcon ? '' : ' hidden'}>${SHOW.gameGroupIcon && g.groupIcon ? `<img class="by-ico" src="${esc(g.groupIcon)}" alt="" loading="lazy" onerror="this.remove()">` : ''}<span class="by-name">${g.group ? 'by ' + esc(g.group) : ''}</span></div>` : ''}
+    <p class="game-desc">${esc(g.desc)}</p>
+    <div class="game-meta">${esc(g.meta)}</div>
+    ${g.link ? `<a class="game-link" href="${esc(g.link)}" target="_blank" rel="noopener">Play game →</a>` : ''}
+  </div>`).join('');
+
+const uidOf = p => String(p.userId || (String(p.link || '').match(/users\/(\d+)/) || [])[1] || '');
+const gidOf = p => String(p.groupId || (String(p.link || '').match(/(?:communities|groups)\/(\d+)/) || [])[1] || '');
+document.getElementById('peopleGrid').innerHTML = people.map(p => {
+  const letter = esc(p.name.trim()[0] || '?'), uid = uidOf(p), gid = uid ? '' : gidOf(p);
+  const pic = p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" data-l="${letter}" onerror="this.replaceWith(document.createTextNode(this.dataset.l))">` : letter;
+  const attrs = ` class="avatar${gid || p.square ? ' sq' : ''}"` + (uid ? ` data-uid="${esc(uid)}"` : gid ? ` data-gid="${esc(gid)}"` : '');
+  const avatar = SHOW.peopleIcon && p.icon !== false
+    ? (p.link ? `<a${attrs} href="${esc(p.link)}" target="_blank" rel="noopener" aria-label="Open ${esc(p.name)}">${pic}</a>` : `<div${attrs}>${pic}</div>`) : '';
+  return `
+  <div class="person">
+    ${avatar}
+    <div>
+      <div class="person-name">${p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.name)}</a>` : esc(p.name)}</div>
+      <div class="person-role">${esc(p.role)}</div>
+      ${gid ? `<div class="person-members" data-gid="${esc(gid)}" hidden></div>` : ''}
+      ${p.quote ? `<p class="person-quote">“${esc(p.quote)}”</p>` : ''}
+    </div>
+  </div>`; }).join('');
+
+// ---- click-to-copy Discord ----
+const toast = document.createElement('div');
+toast.className = 'toast';
+document.body.appendChild(toast);
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 1800);
+}
+document.querySelectorAll('[data-copy]').forEach(el => el.addEventListener('click', async e => {
+  e.preventDefault();
+  try { await navigator.clipboard.writeText(el.dataset.copy); showToast('Copied: ' + el.dataset.copy); }
+  catch (err) { showToast('Discord: ' + el.dataset.copy); }
+}));
+
+// ---- highlight current nav link ----
+const navAnchors = [...document.querySelectorAll('nav.links a')];
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+document.querySelectorAll('section[id]').forEach(s => spy.observe(s));
+
+// ---- code showcase (edit snippets freely) ----
+const snippets = [
+  { tab: "Remote Handler", file: "remoteHandler.lua", note: "Handles roblox remote remotes better",
+    code: `local network = {}
+
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local  remoteEvent =replicatedStorage.RemoteEvent
+local remoteFunction = replicatedStorage.RemoteFunction
+local unreliableRemoteEvent = replicatedStorage.UnreliableRemoteEvent
+
+local eventData = require(replicatedStorage.Modules.Game.eventData)
+local remoteValidator = require(game.ServerStorage.Modules.remoteValidator)
+
+local eventList = eventData.eventList
+
+local functionCallBacks  = {}
+local eventListeners = {}
+local idToName = {}
+local nameToId = {}
+for eventType,events in eventList do 
+	for id,event in events do 
+		idToName[id] = event
+		nameToId[event] = id
+		network[event] = {}
+		if eventType == "RemoteEvent"  then
+			network[event].OnServer  = function(callback)
+				if not 	eventListeners[id] then
+					eventListeners[id] = {}
+				end
+				table.insert(eventListeners[id],callback)
+			end
+			network[event].Fire = function(player, ...)
+				remoteEvent:FireClient(player, id, ...)
+			end
+			network[event].FireAll= function( ...)
+				unreliableRemoteEvent:FireClient(id, ...)
+			end
+			continue
+		end
+		if eventType == "UnreliableRemote"  then
+			network[event].OnServer   = function(callback)
+				if not 	eventListeners[id] then
+					eventListeners[id] = {}
+				end
+
+				table.insert(eventListeners[id],callback)
+			end
+			network[event].Fire = function(player, ...)
+				unreliableRemoteEvent:FireClient(player, id, ...)
+			end
+			network[event].FireAll= function( ...)
+				unreliableRemoteEvent:FireClient(id, ...)
+			end
+
+			continue
+		end
+		if eventType == "RemoteFunction" then 
+			network[event].OnServer  = function(callback)
+				functionCallBacks[id] = callback
+			end
+			network[event].InvokeClient = function(player,...)
+				remoteFunction:InvokeClient(player,id,...)
+			end
+			continue
+		end
+	end
+end
+function dualRemoteEvent(...)
+	
+	local args = { ...}
+	local player =args[1]
+	local eventId =args[2]
+	
+	if not remoteValidator.checkData(table.unpack(args,3)) then return end 
+	if not remoteValidator.rateCheck(player,idToName[eventId]) then return end 
+	if not eventListeners[eventId] then return end 
+	for _, callback in eventListeners[eventId] do
+		task.spawn(function()
+			callback(table.unpack(args,3))
+		end)
+	end
+end
+
+remoteFunction.OnServerInvoke = function(player:Player,eventId:string,...)
+	local args = {...}
+	if not remoteValidator.checkData(args) then return end 
+	if not remoteValidator.rateCheck(player,idToName[eventId]) then return end 
+	local callBack = functionCallBacks[eventId]
+	if not callBack then return end
+	return callBack(player,...)
+end
+
+remoteEvent.OnServerEvent:Connect(function(...)
+	dualRemoteEvent(...)
+end)
+
+unreliableRemoteEvent.OnServerEvent:Connect(function(...)
+	dualRemoteEvent(...)
+end)
+return network
+` },
+ { tab: "Npc Handler", file: "npcClass.lua", note: "OOP based npc handler",
+    code: `local npcClass = {}
+npcClass.__index = npcClass
+
+local Janitor = require(game.ReplicatedStorage.modules.Janitor)
+
+local npcDataModule = require(game.ServerStorage.modules.npcData)
+local pathFinding = require(game.ServerStorage.modules.pathFinding)
+
+local function getPartCorners(part)
+	local cframe = part.CFrame
+	local size = part.Size * 0.5 
+	local x, y, z = size.X, size.Y, size.Z
+
+	local corners = {
+		cframe * Vector3.new(x, y, z),
+		cframe * Vector3.new(x, y, -z),
+		cframe * Vector3.new(x, -y, z),
+		cframe * Vector3.new(x, -y, -z),
+		cframe * Vector3.new(-x, y, z),
+		cframe * Vector3.new(-x, y, -z),
+		cframe * Vector3.new(-x, -y, z),
+		cframe * Vector3.new(-x, -y, -z),
+	}
+
+	return corners
+end
+
+local function LOS(model1, model2, maxdis)
+
+	local parts
+	local pos = model1.Head.Position
+	if model2.ClassName == "Model" then
+		parts = model2:GetChildren()
+	else
+		parts = { [1] = model2 }
+	end
+
+	local filterDes = { model1 }
+
+	local rayCastParams = RaycastParams.new()
+	rayCastParams.FilterType = Enum.RaycastFilterType.Exclude
+	rayCastParams.FilterDescendantsInstances = filterDes
+
+	for i, bodyPart in parts do
+		if not bodyPart:IsA("BasePart") then
+			continue
+		end
+		local corners = getPartCorners(bodyPart)
+
+		for i, point in corners do
+			local startRay = pos
+
+			local result
+			repeat
+				result = workspace:Raycast(startRay, (point - startRay), rayCastParams)
+				if result then
+					table.insert(filterDes, result.Instance)
+					rayCastParams.FilterDescendantsInstances = filterDes
+				end
+			until not result or result.Instance.Transparency == 0
+
+			return result
+		end
+	end
+end
+
+local function visionScan(model, Position, maxdis, angle)
+	local head = model.Head
+
+	local base = head.Position
+	local target = Position
+
+	local maxcos = math.cos(angle * math.pi / 180)
+
+	local basis = head.CFrame.LookVector
+
+	local direction = target - base
+
+	local dist = direction.Magnitude
+	local unit = direction.Unit
+	local dotpro = basis:Dot(unit)
+
+	if dotpro > maxcos and maxdis > dist then
+		return true
+	end
+end
+
+function npcClass.new(Type)
+	local npc = setmetatable({ _janitor = Janitor.new() }, npcClass)
+	local npcData = npcDataModule[Type]
+
+	local model = npcData.model:Clone()
+	model.Humanoid.WalkSpeed = npcData.speed
+	model.Parent = workspace.mobs
+
+	npc.id = model.Name :: string
+	npc.type = Type :: string
+	npc.model = model :: Model
+	npc.hitbox = model:WaitForChild("Hitbox")
+	npc.Humanoid = model:WaitForChild("Humanoid") :: Humanoid
+	npc.HumanoidRootPart = model:WaitForChild("HumanoidRootPart") :: Part
+	npc.target = nil :: Instance?
+	npc.isDead = false
+	npc.state = "idle"
+	npc.connections = {}
+	npc.thinking = 0
+	npc.idleTime = 0
+	npc.lastTarget = nil
+	npc.lastPath = nil
+	npc.lastPathIndex = 0
+
+	npc.Humanoid.Died:Connect(function()
+		npc:onDeath()
+	end)
+
+	return npc
+end
+
+function npcClass:canSeeEnemy(enemy)
+	local npcData = npcDataModule[self.type]
+	local maxdis = npcData.visionRange
+
+	local result = LOS(self.model, enemy, maxdis)
+
+	if result and result.Instance.Parent == enemy then
+		return true
+	end
+end
+
+function npcClass:canBeSeen(enemy, enemyVision, position)
+	local part = self.hitbox:Clone()
+
+	local scan = visionScan(enemy, position + (Vector3.yAxis * (position.Y + part.Size.Y / 2)), 100, 65)
+
+	if not scan then
+		return
+	end
+
+	part.Weld:Destroy()
+	part.Anchored = true
+	part.Position = position + (Vector3.yAxis * (position.Y + part.Size.Y / 2))
+	part.Parent = workspace
+
+	local result = LOS(enemy, part, enemyVision)
+
+	if result and result.Instance == part then
+		part:Destroy()
+		return true
+	end
+
+	part:Destroy()
+end
+
+function npcClass:visionScan(Position)
+	local npcData = npcDataModule[self.type]
+	local maxdis = npcData.visionRange
+
+	local head = self.model:FindFirstChild("Head")
+	if not head then
+		return
+	end
+
+	return visionScan(self.model, Position, maxdis, npcData.visionAngle)
+end
+
+function npcClass:soundScan(enemy)
+	local npcData = npcDataModule[self.type]
+	local detectDis = npcData.hearRange
+
+	if not enemy:FindFirstChild("Sound") then
+		return
+	end
+
+	local blockage = 0
+	local maxBlockage = 3
+
+	local maxdis = (self.HumanoidRootPart.Position - enemy.HumanoidRootPart.Position).Magnitude
+
+	local maxLoudness = 0
+	for i, sound in enemy.Sound:GetChildren() do
+		if not sound:IsA("NumberValue") then
+			continue
+		end
+		maxLoudness = math.max(maxLoudness, sound.Value)
+	end
+
+	local filterList = { enemy, self.model }
+	local raycastParams = RaycastParams.new()
+	raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+	raycastParams.FilterDescendantsInstances = filterList
+
+	local rayStart = self.model.HumanoidRootPart.Position
+	local rayEnd = enemy.HumanoidRootPart.Position
+
+	for i = 0, maxBlockage do
+		local result = workspace:Raycast(rayStart, (rayEnd - rayStart) , raycastParams)
+
+		if result then
+			blockage += 1
+			table.insert(filterList, result.Instance)
+			raycastParams.FilterDescendantsInstances = filterList
+			rayStart = result.Position
+		else
+			break
+		end
+	end
+
+	
+	local currDetectDis = (maxLoudness*detectDis/10)*((maxBlockage-blockage/maxBlockage) )
+	
+	if currDetectDis >= detectDis then
+		return true
+	end
+end
+
+function npcClass:setState(state)
+	if self.state == state then
+		return
+	end
+	if self.states[self.state].exit then
+		self.states[self.state].exit(self)
+	end
+
+	self.state = state
+
+	if self.states[self.state].enter then
+		self.states[self.state].enter(self)
+	end
+end
+
+function npcClass:wander()
+	local npcData = npcDataModule[self.type]
+	local wanderDistance = npcData.wanderingDistance
+
+	local x = math.random(math.round(wanderDistance / 2), wanderDistance) * (-1) ^ (math.random(0, 1))
+	local z = math.random(math.round(wanderDistance / 2), wanderDistance) * (-1) ^ (math.random(0, 1))
+
+	local wanderPosition = self.HumanoidRootPart.Position + Vector3.new(x, 0, z)
+
+	self:makePath(wanderPosition)
+end
+
+function npcClass:playerScan()
+	local target
+	for i, player in game.Players:GetPlayers() do
+		local enemy = player.Character
+
+		if not enemy then
+			continue
+		end
+
+		if self:visionScan(enemy.HumanoidRootPart.Position) then
+			if self:canSeeEnemy(enemy) then
+				target = enemy
+			end
+		end
+
+		if self:soundScan(enemy) then
+			target = enemy
+		end
+	end
+
+	return target
+end
+
+function npcClass:move()
+	if not self.moving then
+		return
+	end
+
+	if not self.path or not self.path[self.currIndex] then
+		self.moving = false
+		return
+	end
+
+	if (self.path[self.currIndex] - self.HumanoidRootPart.Position).Magnitude < 2 then
+		if #self.path == self.currIndex then
+			self.Humanoid:MoveTo(self.HumanoidRootPart.Position)
+
+			self.moving = false
+			self.currIndex = 2
+			return
+		end
+
+		self.currIndex += 1
+
+		local waypoint = self.path[self.currIndex]
+		self.Humanoid.WalkToPoint = waypoint
+	end
+end
+
+function npcClass:makePath(goalPos)
+	local start = self.HumanoidRootPart.Position
+
+	local npcData = npcDataModule[self.type]
+	local modifer = {
+		stalker = npcData.stalking,
+		npc = self,
+	}
+
+	self.path = pathFinding.findPath(start, goalPos, modifer)
+	if not self.path or #self.path == 1 then
+		return
+	end
+	self.lastSavedPosition = goalPos
+	self.currIndex = 2
+
+	self.Humanoid.WalkToPoint = self.path[self.currIndex]
+
+	self.moving = true
+end
+
+function npcClass:follow(target)
+	local goalPos = target.HumanoidRootPart.Position
+
+	if not self.lastSavedPosition or (self.lastSavedPosition - goalPos).Magnitude > 1 then
+		self:makePath(goalPos)
+	end
+end
+
+function npcClass:onDeath()
+	self.isDead = true
+	coroutine.wrap(
+		function()
+			task.wait(3)
+			npcClass:Destroy()
+		end
+	)()
+end
+
+function npcClass:Destroy()
+	local janitor = self._janitor
+	if janitor then
+		janitor:Destroy() 
+		self._janitor = nil  
+	end
+end
+
+return npcClass
+` }, 
+];
+
+const kwRe = /(--[^\n]*)|("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')|\b(local|function|return|end|if|then|else|elseif|for|do|in|not|and|or|nil|true|false|while|break|type)\b|\b(\d+\.?\d*)\b|\b([A-Za-z_]\w*)(?=\()/g;
+const escHtml = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+function highlight(src) {
+  let out = '', last = 0, m;
+  while ((m = kwRe.exec(src))) {
+    out += escHtml(src.slice(last, m.index));
+    const cls = m[1] ? 'tok-cm' : m[2] ? 'tok-str' : m[3] ? 'tok-kw' : m[4] ? 'tok-num' : 'tok-fn';
+    out += `<span class="${cls}">${escHtml(m[0])}</span>`;
+    last = kwRe.lastIndex;
+  }
+  return out + escHtml(src.slice(last));
+}
+const tabsEl = document.getElementById('codeTabs');
+let current = 0;
+function showSnippet(i) {
+  current = i;
+  const s = snippets[i];
+  document.getElementById('codeFile').textContent = s.file;
+  document.getElementById('codeBody').innerHTML = highlight(s.code);
+  document.getElementById('codeNote').textContent = s.note;
+  [...tabsEl.children].forEach((b, n) => b.classList.toggle('on', n === i));
+}
+snippets.forEach((s, i) => {
+  const b = document.createElement('button');
+  b.className = 'code-tab';
+  b.textContent = s.tab;
+  b.onclick = () => showSnippet(i);
+  tabsEl.appendChild(b);
+});
+showSnippet(0);
+document.getElementById('codeCopy').addEventListener('click', async e => {
+  try { await navigator.clipboard.writeText(snippets[current].code); e.target.textContent = 'Copied!'; }
+  catch (err) { e.target.textContent = 'Press Ctrl+C'; }
+  setTimeout(() => e.target.textContent = 'Copy', 1500);
+});
+
+  
+// ---- total visits across listed games (free public Roblox proxy, no server needed) ----
+const PROXY_DOMAINS = ["ff-roproxy.com", "roproxy.com"]; // tried in order; the first one that answers wins
+// Games that count toward the Contributed Visits total but are NOT shown in the games list.
+// Paste a Roblox game link or just the place ID. One per line, with a comma after each.
+const HIDDEN_GAMES = [
+  136823864219378,
+  15894384621,
+  103282183767131,
+  14888386963,
+];
+const placeIdOf = x => (String(x).match(/games\/(\d+)/) || String(x).match(/^\s*(\d+)\s*$/) || [])[1];
+const FALLBACK_VISITS = 0; // optional: a number shown if every proxy is down and nothing is cached, e.g. 864646758
+function rbx(sub, path) {
+  const tries = PROXY_DOMAINS.map(async d => {
+    const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 5000); // give up after 5s
+    try {
+      const r = await fetch(`https://${sub}.${d}${path}`, { signal: ctl.signal });
+      if (!r.ok) throw new Error(d + ' answered HTTP ' + r.status);
+      return await r.json();
+    } finally { clearTimeout(t); }
+  });
+  return Promise.any(tries).catch(e => { console.warn('[visits] every proxy failed for', path, (e.errors || []).map(x => x.message)); return null; });
+}
+async function loadVisits(list) {
+  const key = 'rbxVisits3:' + list.join(',');
+  let c = null;
+  try { c = JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) {}
+  if (c && Date.now() - c.t < 3600000) return c; // fresh for 1 hour, easy on the free proxy
+  const pairs = (await Promise.all(list.map(async place => {
+    const d = await rbx('apis', `/universes/v1/places/${place}/universe`);
+    return d && d.universeId ? { place, universe: d.universeId } : null;
+  }))).filter(Boolean);
+  if (!pairs.length) { console.warn('[visits] no game found for these ids. Check the links in the games list:', list); return c; }
+  const data = await rbx('games', `/v1/games?universeIds=${[...new Set(pairs.map(x => x.universe))].join(',')}`);
+  if (!data || !Array.isArray(data.data)) return c; // proxies down: show the last saved number if there is one
+  const byU = new Map(data.data.map(g => [g.id, g]));
+  const info = {}, counted = new Set();
+  let total = 0;
+  pairs.forEach(x => {
+    const g = byU.get(x.universe);
+    if (!g) return;
+    info[x.place] = { visits: g.visits, playing: g.playing, universe: x.universe, creator: g.creator ? { id: g.creator.id, name: g.creator.name, type: g.creator.type } : null };
+    if (!counted.has(x.universe)) { counted.add(x.universe); total += g.visits; } // shared universe counted once
+  });
+  const out = { t: Date.now(), info, total };
+  try { localStorage.setItem(key, JSON.stringify(out)); } catch (e) {}
+  return out;
+}
+(async () => {
+  const ids = games.map(g => placeIdOf(g.link || ''));
+  const list = [...new Set([...ids, ...HIDDEN_GAMES.map(placeIdOf)].filter(Boolean))];
+  const hide = () => { document.getElementById('visitsTotal').hidden = true; };
+  if (!list.length) return hide();
+  let d = await loadVisits(list);
+  if (d && d.info) { applyGameImages(ids, d.info); applyGameGroups(ids, d.info); }
+  if ((!d || !d.total) && FALLBACK_VISITS > 0) d = { info: {}, total: FALLBACK_VISITS, fallback: true };
+  if (!d || !d.total) return hide(); // proxies down: banner stays hidden, cards keep their manual text
+  const fmt = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 });
+  const cards = document.querySelectorAll('#gamesRow .game-card');
+  ids.forEach((id, i) => {
+    const g = d.info[id];
+    if (g && cards[i]) cards[i].querySelector('.game-meta').textContent = fmt.format(g.visits) + ' visits' + (g.playing ? ' · ' + g.playing + ' playing now' : '');
+  });
+  const box = document.getElementById('visitsTotal'), dg = document.getElementById('vtDigits');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const show = n => {
+    const str = String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    dg.style.setProperty('--n', str.length);
+    dg.innerHTML = [...str].map(c => c === '.' ? '<span class="vt-sep">.</span>' : `<span class="vt-d">${c}</span>`).join('');
+  };
+
+  dg.setAttribute('aria-label', d.total.toLocaleString('en-US') + ' visits');
+  box.hidden = false;
+  box.classList.remove('loading');
+  if (reduced) { show(d.total); return; }
+  const t0 = performance.now(), dur = 1400;
+  (function tick(t) {
+    const k = Math.min(1, (t - t0) / dur);
+    show(Math.round(d.total * (1 - Math.pow(1 - k, 3))));
+    if (k < 1) requestAnimationFrame(tick);
+  })(t0);
+})();
+  
+// ---- automatic pictures from Roblox (only used when you did not set image yourself) ----
+function cacheGet(key, maxAge) { try { const c = JSON.parse(localStorage.getItem(key) || 'null'); if (c && Date.now() - c.t < maxAge) return c.map; } catch (e) {} return null; }
+function cacheSet(key, map) { try { if (Object.keys(map).length) localStorage.setItem(key, JSON.stringify({ t: Date.now(), map })); } catch (e) {} }
+
+async function applyGameImages(ids, info) {
+  const cards = document.querySelectorAll('#gamesRow .game-card');
+  const need = ids.map((id, i) => ({ id, i })).filter(x => x.id && !games[x.i].image && info[x.id] && info[x.id].universe);
+  if (!need.length) return;
+  const uni = [...new Set(need.map(x => info[x.id].universe))];
+  const key = 'rbxThumbs:' + uni.join(',');
+  let map = cacheGet(key, 86400000);
+  if (!map) {
+    map = {};
+    const d = await rbx('thumbnails', `/v1/games/multiget/thumbnails?universeIds=${uni.join(',')}&countPerUniverse=1&size=768x432&format=Png&isCircular=false`);
+    ((d && d.data) || []).forEach(g => { const t = (g.thumbnails || []).find(t => t.state === 'Completed' && t.imageUrl); if (t) map[g.universeId] = t.imageUrl; });
+    const missing = uni.filter(u => !map[u]);
+    if (missing.length) { // no screenshot uploaded: use the square game icon instead
+      const ic = await rbx('thumbnails', `/v1/games/icons?universeIds=${missing.join(',')}&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false`);
+      ((ic && ic.data) || []).forEach(x => { if (x.state === 'Completed' && x.imageUrl) map[x.targetId] = x.imageUrl; });
     }
+    cacheSet(key, map);
+  }
+  need.forEach(x => {
+    const url = map[info[x.id].universe], box = cards[x.i] && cards[x.i].querySelector('.game-thumb');
+    if (!url || !box || box.querySelector('img')) return;
+    const img = new Image();
+    img.alt = games[x.i].name; img.loading = 'lazy'; img.onerror = () => img.remove(); img.src = url;
+    box.appendChild(img);
+  });
+}
+
+(async () => {
+  const els = [...document.querySelectorAll('#peopleGrid .avatar[data-uid]')].filter(el => !el.querySelector('img'));
+  if (!els.length) return;
+  const uids = [...new Set(els.map(el => el.dataset.uid))];
+  const key = 'rbxHeads:' + uids.join(',');
+  let map = cacheGet(key, 86400000);
+  if (!map) {
+    map = {};
+    const d = await rbx('thumbnails', `/v1/users/avatar-headshot?userIds=${uids.join(',')}&size=150x150&format=Png&isCircular=false`);
+    ((d && d.data) || []).forEach(x => { if (x.state === 'Completed' && x.imageUrl) map[x.targetId] = x.imageUrl; });
+    cacheSet(key, map);
+  }
+  els.forEach(el => {
+    const url = map[el.dataset.uid];
+    if (!url) return;
+    const img = new Image(), letter = el.textContent;
+    img.alt = ''; img.dataset.l = letter; img.onerror = () => img.replaceWith(document.createTextNode(letter)); img.src = url;
+    el.textContent = ''; el.appendChild(img);
+  });
+})();
+  
+// ---- carousels (games, projects, people) ----
+function initCarousel(boxId, rowId, itemSel, labelSel, autoMs) {
+  const box = document.getElementById(boxId), row = document.getElementById(rowId);
+  if (!box || !row) return;
+  const items = [...row.querySelectorAll(itemSel)], n = items.length;
+  if (!n) return;
+  row.classList.add('car-row');
+  items.forEach(c => c.classList.add('car-item'));
+  const pills = box.querySelector('.gc-pills');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur = 0, hover = false, visible = false, holdUntil = 0;
+
+  const pillEls = items.map((c, i) => {
+    const el = c.querySelector(labelSel), b = document.createElement('button');
+    b.className = 'gc-pill'; b.textContent = el ? el.textContent.trim() : String(i + 1);
+    b.addEventListener('click', () => { hold(); go(i); });
+    pills.appendChild(b);
+    return b;
+  });
+  function mark(i) {
+    cur = i;
+    items.forEach((c, k) => c.classList.toggle('active', k === i));
+    pillEls.forEach((p, k) => { p.classList.toggle('on', k === i); k === i ? p.setAttribute('aria-current', 'true') : p.removeAttribute('aria-current'); });
+  }
+  function go(i) {
+    i = (i + n) % n;
+    const c = items[i];
+    row.scrollTo({ left: c.offsetLeft - (row.clientWidth - c.offsetWidth) / 2, behavior: reduced ? 'auto' : 'smooth' });
+    mark(i);
+  }
+  const hold = () => { holdUntil = Date.now() + 10000; }; // stop auto-advance for 10s after any manual use
+
+  let raf = 0;
+  row.addEventListener('scroll', () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const mid = row.scrollLeft + row.clientWidth / 2;
+      let best = 0, bd = Infinity;
+      items.forEach((c, k) => { const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid); if (d < bd) { bd = d; best = k; } });
+      if (best !== cur) mark(best);
+    });
+  }, { passive: true });
+
+  box.querySelector('.gc-prev').addEventListener('click', () => { hold(); go(cur - 1); });
+  box.querySelector('.gc-next').addEventListener('click', () => { hold(); go(cur + 1); });
+  items.forEach((c, i) => c.addEventListener('click', e => { if (i !== cur) { e.preventDefault(); hold(); go(i); } }));
+  row.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); hold(); go(cur + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); hold(); go(cur - 1); }
+  });
+  row.addEventListener('touchstart', hold, { passive: true });
+  box.addEventListener('mouseenter', () => hover = true);
+  box.addEventListener('mouseleave', () => hover = false);
+  new IntersectionObserver(es => es.forEach(en => visible = en.isIntersecting), { threshold: 0.4 }).observe(box);
+
+  if (!reduced && n > 1 && autoMs) setInterval(() => { if (visible && !hover && Date.now() > holdUntil) go(cur + 1); }, autoMs);
+  mark(0);
+  window.addEventListener('resize', () => go(cur));
+}
+initCarousel('gamesCarousel', 'gamesRow', '.game-card', '.game-name', 5000);
+initCarousel('projCarousel', 'projRow', '.project-card', '.project-title', 6500);
+initCarousel('peopleCarousel', 'peopleGrid', '.person', '.person-name', 7500);
+
+  
+// ---- animated background: floating particles that connect when close, and gently move away from the cursor ----
+(() => {
+  const cv = document.getElementById('bgCanvas');
+  if (!cv || !cv.getContext) return;
+  const ctx = cv.getContext('2d');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const COLORS = ['139,123,255', '139,123,255', '94,200,248', '255,139,214']; // mostly purple, some blue and pink
+  const LINK = 130;
+  let W = 0, H = 0, pts = [], raf = 0, timer = 0;
+  const mouse = { x: -9999, y: -9999 };
+
+  function size() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth; H = window.innerHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.min(70, Math.round(W * H / (W < 760 ? 17000 : 21000)));
+    while (pts.length < n) pts.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .28, vy: (Math.random() - .5) * .28, r: Math.random() * 1.4 + .7, c: COLORS[(Math.random() * COLORS.length) | 0] });
+    pts.length = n;
+    if (reduced) frame();
+  }
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    for (let i = 0; i < pts.length; i++) {
+      const p = pts[i];
+      if (!reduced) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < -10) p.x = W + 10; else if (p.x > W + 10) p.x = -10;
+        if (p.y < -10) p.y = H + 10; else if (p.y > H + 10) p.y = -10;
+        const dx = p.x - mouse.x, dy = p.y - mouse.y, md = dx * dx + dy * dy;
+        if (md < 16000) { const d = Math.sqrt(md) || 1, f = (1 - md / 16000) * .7; p.x += dx / d * f; p.y += dy / d * f; }
+      }
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fillStyle = `rgba(${p.c},.55)`; ctx.fill();
+      for (let j = i + 1; j < pts.length; j++) {
+        const q = pts[j], ax = p.x - q.x, ay = p.y - q.y, d2 = ax * ax + ay * ay;
+        if (d2 < LINK * LINK) {
+          ctx.strokeStyle = `rgba(${p.c},${((1 - Math.sqrt(d2) / LINK) * .22).toFixed(3)})`;
+          ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+        }
+      }
+    }
+    if (!reduced) raf = requestAnimationFrame(frame);
+  }
+  window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(size, 150); });
+  window.addEventListener('pointermove', e => { if (e.pointerType === 'mouse') { mouse.x = e.clientX; mouse.y = e.clientY; } }, { passive: true });
+  document.addEventListener('mouseleave', () => { mouse.x = mouse.y = -9999; });
+  document.addEventListener('visibilitychange', () => { // pause when the tab is hidden to save battery
+    if (reduced) return;
+    if (document.hidden) cancelAnimationFrame(raf); else { cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); }
+  });
+  size();
+  if (!reduced) raf = requestAnimationFrame(frame);
+})();
+  
+// ---- group name + icon under each game (automatic from the game's owner, unless you set them yourself) ----
+async function applyGameGroups(ids, info) {
+  if (!SHOW.gameGroup) return;
+  const cards = document.querySelectorAll('#gamesRow .game-card'), items = [];
+  ids.forEach((id, i) => {
+    const g = games[i], by = cards[i] && cards[i].querySelector('.game-by');
+    if (!by || g.showGroup === false) return;
+    const cr = (id && info[id] && info[id].creator) || null;
+    const gid = g.groupId || (cr && cr.type === 'Group' ? cr.id : null);
+    const uid = !gid && cr && cr.type === 'User' ? cr.id : null;
+    const name = g.group || (cr && cr.name);
+    if (name) { by.querySelector('.by-name').textContent = 'by ' + name; by.hidden = false; }
+    if (SHOW.gameGroupIcon && !g.groupIcon && (gid || uid)) items.push({ by, gid, uid });
+  });
+  if (!items.length) return;
+  const gids = [...new Set(items.filter(x => x.gid).map(x => x.gid))], uids = [...new Set(items.filter(x => x.uid).map(x => x.uid))];
+  const key = 'rbxIcons:' + gids.join(',') + '|' + uids.join(',');
+  let map = cacheGet(key, 86400000);
+  if (!map) {
+    map = {};
+    if (gids.length) {
+      const d = await rbx('thumbnails', `/v1/groups/icons?groupIds=${gids.join(',')}&size=150x150&format=Png&isCircular=false`);
+      ((d && d.data) || []).forEach(x => { if (x.state === 'Completed' && x.imageUrl) map['g' + x.targetId] = x.imageUrl; });
+    }
+    if (uids.length) {
+      const d = await rbx('thumbnails', `/v1/users/avatar-headshot?userIds=${uids.join(',')}&size=150x150&format=Png&isCircular=false`);
+      ((d && d.data) || []).forEach(x => { if (x.state === 'Completed' && x.imageUrl) map['u' + x.targetId] = x.imageUrl; });
+    }
+    cacheSet(key, map);
+  }
+  items.forEach(x => {
+    const url = map[x.gid ? 'g' + x.gid : 'u' + x.uid];
+    if (!url) return;
+    const img = new Image();
+    img.className = 'by-ico'; img.alt = ''; img.onerror = () => img.remove(); img.src = url;
+    x.by.prepend(img); x.by.hidden = false;
+  });
+}
+  
+// ---- studios: live name, member count and icon from Roblox ----
+(async () => {
+  const cards = [...document.querySelectorAll('#peopleGrid .person')];
+  const infoEls = [...document.querySelectorAll('#peopleGrid .person-members[data-gid]')];
+  if (!infoEls.length) return;
+  const gids = [...new Set(infoEls.map(e => e.dataset.gid))];
+
+  const key = 'rbxGroups:' + gids.join(',');
+  let info = cacheGet(key, 3600000);
+  if (!info) {
+    info = {};
+    await Promise.all(gids.map(async id => {
+      const d = await rbx('groups', `/v1/groups/${id}`);
+      if (d && d.id) info[id] = { name: d.name, members: d.memberCount };
+    }));
+    cacheSet(key, info);
+  }
+  const pills = [...document.querySelectorAll('#peopleCarousel .gc-pill')];
+  infoEls.forEach(e => {
+    const g = info[e.dataset.gid];
+    if (!g) return;
+    if (typeof g.members === 'number') { e.textContent = g.members.toLocaleString('en-US') + ' members'; e.hidden = false; }
+    const card = e.closest('.person'), idx = cards.indexOf(card);
+    const nm = card.querySelector('.person-name a') || card.querySelector('.person-name');
+    if (g.name) { nm.textContent = g.name; if (pills[idx]) pills[idx].textContent = g.name; }
+  });
+
+  const avs = [...document.querySelectorAll('#peopleGrid .avatar[data-gid]')].filter(el => !el.querySelector('img'));
+  if (!avs.length) return;
+  const ikey = 'rbxGroupIcons:' + gids.join(',');
+  let icons = cacheGet(ikey, 86400000);
+  if (!icons) {
+    icons = {};
+    const d = await rbx('thumbnails', `/v1/groups/icons?groupIds=${gids.join(',')}&size=150x150&format=Png&isCircular=false`);
+    ((d && d.data) || []).forEach(x => { if (x.state === 'Completed' && x.imageUrl) icons[x.targetId] = x.imageUrl; });
+    cacheSet(ikey, icons);
+  }
+  avs.forEach(el => {
+    const url = icons[el.dataset.gid];
+    if (!url) return;
+    const img = new Image(), letter = el.textContent;
+    img.alt = ''; img.dataset.l = letter; img.onerror = () => img.replaceWith(document.createTextNode(letter)); img.src = url;
+    el.textContent = ''; el.appendChild(img);
+  });
+})();
   </script>
 
 </body>
